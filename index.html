@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>林志明 Jase Lin — 生活風格產品負責人｜履歷</title>
+<style>
+  :root{
+    --navy:#13235A; --dark:#0A0F1F; --white:#fff;
+    --card:#F8FAFC; --border:#E2E8F0;
+    --title:#1E293B; --body:#475569; --sub:#64748B; --light:#AEBBDD;
+    --a1:#1EA672; --a2:#2E7DF2; --a3:#E05A6F; --a4:#F0922A;
+    --a1bg:#E7F6EF; --a2bg:#EAF2FE; --a3bg:#FCEBEE; --a4bg:#FDF0E2;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  body{
+    font-family:"PingFang TC","Noto Sans TC","Microsoft JhengHei","微軟正黑體",sans-serif;
+    color:var(--body); background:#e9edf3; line-height:1.6; font-size:15px;
+  }
+  .page{
+    width:210mm; min-height:297mm; margin:14px auto; background:var(--white);
+    box-shadow:0 6px 30px rgba(19,35,90,.12); overflow:hidden;
+  }
+  /* ---- header / cover band ---- */
+  .hero{
+    background:var(--navy); color:var(--white); padding:38px 44px 32px;
+    position:relative; overflow:hidden;
+  }
+  .hero::after{
+    content:""; position:absolute; right:-90px; top:-120px;
+    width:340px; height:340px; border-radius:50%; background:var(--dark); opacity:.6;
+  }
+  .dots{display:flex; gap:9px; margin-bottom:16px;}
+  .dots span{width:11px;height:11px;border-radius:50%;display:inline-block;}
+  .dots .d1{background:var(--a1);} .dots .d2{background:var(--a2);}
+  .dots .d3{background:var(--a3);} .dots .d4{background:var(--a4);}
+  .kicker{color:var(--light); font-size:12.5px; letter-spacing:2px; margin-bottom:12px;}
+  .name{font-size:40px; font-weight:800; letter-spacing:1px; line-height:1.1;}
+  .name .en{font-weight:300; opacity:.92;}
+  .accent-bar{width:72px;height:4px;background:var(--a1);margin:16px 0 14px;border-radius:2px;}
+  .tagline{font-size:18px;font-weight:700;color:var(--white);}
+  .tagsub{font-size:14px;color:var(--light);margin-top:4px;}
+  .contact{
+    position:relative; z-index:2; margin-top:22px; font-size:12.5px; color:var(--light);
+    border-top:1px solid rgba(174,187,221,.3); padding-top:12px;
+  }
+  .contact a{color:var(--light);text-decoration:none;}
+  /* ---- body ---- */
+  .content{padding:30px 44px 40px;}
+  .sec{margin-bottom:26px;}
+  .sec-head{display:flex;align-items:center;gap:10px;margin-bottom:14px;}
+  .sec-head .en{font-size:11px;letter-spacing:2px;color:var(--a1);font-weight:700;text-transform:uppercase;}
+  .sec-head h2{font-size:21px;color:var(--title);font-weight:800;}
+  .sec-head .chip{width:26px;height:26px;border-radius:7px;background:var(--a1);
+    color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:14px;}
+  /* highlight stat cards */
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
+  .stat{background:var(--card);border:1px solid var(--border);border-radius:10px;
+    padding:16px 16px 14px;border-left:4px solid var(--a1);}
+  .stat.s2{border-left-color:var(--a2);} .stat.s3{border-left-color:var(--a3);} .stat.s4{border-left-color:var(--a4);}
+  .stat .num{font-size:30px;font-weight:800;color:var(--a1);line-height:1;}
+  .stat.s2 .num{color:var(--a2);} .stat.s3 .num{color:var(--a3);} .stat.s4 .num{color:var(--a4);}
+  .stat .lbl{font-size:14px;font-weight:700;color:var(--title);margin:8px 0 4px;}
+  .stat .dsc{font-size:11.5px;color:var(--body);line-height:1.4;}
+  .valuebar{margin-top:14px;background:var(--card);border:1px solid var(--border);
+    border-left:4px solid var(--a1);border-radius:8px;padding:13px 16px;
+    font-size:14px;font-weight:700;color:var(--title);}
+  .src{font-size:12px;color:var(--sub);margin-top:8px;}
+  /* unique Art two-col */
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .block{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:18px 20px;}
+  .block.left{border-left:4px solid var(--a1);}
+  .block.right{border-left:4px solid var(--a4);}
+  .block h3{font-size:15px;color:var(--title);font-weight:800;margin-bottom:10px;}
+  .block ul{list-style:none;}
+  .block li{position:relative;padding-left:16px;margin-bottom:7px;font-size:13px;color:var(--body);line-height:1.45;}
+  .block li::before{content:"";position:absolute;left:0;top:8px;width:6px;height:6px;border-radius:50%;background:var(--a1);}
+  .award{background:#fff;border:1px solid var(--border);border-radius:9px;padding:9px 12px;margin-bottom:8px;}
+  .award .an{font-size:13.5px;font-weight:800;color:var(--a4);}
+  .award .ad{font-size:11.5px;color:var(--sub);margin-top:2px;}
+  /* experience list */
+  .exp{background:var(--card);border:1px solid var(--border);border-radius:10px;
+    border-left:4px solid var(--a2);padding:16px 20px;margin-bottom:12px;
+    display:grid;grid-template-columns:150px 1fr;gap:16px;}
+  .exp.e3{border-left-color:var(--a3);} .exp.e1{border-left-color:var(--a1);} .exp.e4{border-left-color:var(--a4);}
+  .exp.vc{align-items:center;}
+  .exp.hl{border-left:5px solid var(--navy);}
+  .exp.hl .org{color:var(--navy);}
+  .exp .date{font-size:12px;font-weight:700;color:var(--a2);}
+  .exp.e3 .date{color:var(--a3);} .exp.e1 .date{color:var(--a1);} .exp.e4 .date{color:var(--a4);}
+  .exp .org{font-size:15px;font-weight:800;color:var(--title);margin-top:5px;}
+  .exp .role{font-size:11.5px;color:var(--sub);margin-top:3px;line-height:1.35;}
+  .exp .desc{font-size:13px;color:var(--body);line-height:1.5;}
+  /* capabilities grid */
+  .caps{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+  .cap{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px 18px;border-left:4px solid var(--a1);}
+  .cap.c2{border-left-color:var(--a2);} .cap.c3{border-left-color:var(--a4);} .cap.c4{border-left-color:var(--a3);}
+  .cap h4{font-size:15px;color:var(--title);font-weight:800;margin-bottom:5px;}
+  .cap p{font-size:12.5px;color:var(--body);line-height:1.45;}
+  .edu{background:var(--card);border:1px solid var(--border);border-left:4px solid var(--a2);
+    border-radius:10px;padding:16px 20px;margin-top:14px;}
+  .edu h4{font-size:15px;color:var(--title);font-weight:800;margin-bottom:9px;}
+  .edu ul{list-style:none;}
+  .edu li{position:relative;padding-left:16px;margin-bottom:6px;font-size:13px;color:var(--body);}
+  .edu li::before{content:"";position:absolute;left:0;top:8px;width:6px;height:6px;border-radius:50%;background:var(--a2);}
+  .skills{margin-top:10px;font-size:12.5px;color:var(--sub);}
+  .skills b{color:var(--a4);}
+  @media print{ body{background:#fff;} .page{box-shadow:none;margin:0;} }
+</style>
+</head>
+<body>
+<div class="page">
+  <!-- HERO -->
+  <div class="hero">
+    <div class="dots"><span class="d1"></span><span class="d2"></span><span class="d3"></span><span class="d4"></span></div>
+    <div class="kicker">生活風格產品負責人 · LIFESTYLE PRODUCT LEAD</div>
+    <div class="name">林志明 <span class="en">Jase Lin</span></div>
+    <div class="accent-bar"></div>
+    <div class="tagline">品牌創辦 × 商品開發 × 虛實通路 × 國際外銷</div>
+    <div class="tagsub">從概念到零售，完整掌握居家 / 生活風格產品線</div>
+    <div class="contact">
+<a href="https://www.linkedin.com/in/jaselin/">linkedin.com/in/jaselin</a>
+    </div>
+  </div>
+
+  <div class="content">
+    <!-- SIGNATURE -->
+    <div class="sec">
+      <div class="sec-head"><div class="chip">J</div><div><div class="en">Signature Track Record</div></div><h2>品牌從 0 到 1 的實績</h2></div>
+      <div class="stats">
+        <div class="stat"><div class="num">50+</div><div class="lbl">虛實通路</div><div class="dsc">全台實體 + 線上通路布建</div></div>
+        <div class="stat s2"><div class="num">8 國</div><div class="lbl">國際外銷</div><div class="dsc">日・中・馬・德・西・新加坡・瑞典・泰</div></div>
+        <div class="stat s3"><div class="num">6 項</div><div class="lbl">國際設計獎</div><div class="dsc">red dot・Good Design・金點・感質賞等</div></div>
+        <div class="stat s4"><div class="num">1 個</div><div class="lbl">自創品牌</div><div class="dsc">有藝氏 unique Art 從概念到零售</div></div>
+      </div>
+      <div class="valuebar">以體貼設計創造 Wow 體驗：概念 → 開發 → 品牌 → 通路零售 → 行銷 → 數位平台營運 → AI 世代產品。</div>
+    </div>
+
+    <!-- UNIQUE ART -->
+    <div class="sec">
+      <div class="sec-head"><div class="chip">J</div><div><div class="en">Brand & Product · 有藝氏 unique Art</div></div><h2>生活風格品牌主理人</h2></div>
+      <div class="two">
+        <div class="block left">
+          <h3>端到端負責範疇</h3>
+          <ul>
+            <li>創立生活風格商品品牌，負責商品開發</li>
+            <li>建立全台 50+ 虛實通路（實體 + 線上）</li>
+            <li>外銷日本、中國、馬來西亞、德國、西班牙、新加坡、瑞典、泰國等 8 國</li>
+            <li>協助申請多項國內外專利與商標</li>
+            <li>政府標案 / 補助案執行</li>
+            <li>同時擔任音樂家經紀人（馬修連恩 Matthew Lien）</li>
+            <li>協助發行 5 張音樂專輯（1 張入圍金曲獎），具政府補助</li>
+            <li>國內外現場演出 / 演唱會企劃與執行</li>
+          </ul>
+        </div>
+        <div class="block right">
+          <h3>獲獎與肯定</h3>
+          <div class="award"><div class="an">red dot</div><div class="ad">德國紅點設計獎</div></div>
+          <div class="award"><div class="an">Good Design</div><div class="ad">日本優良設計獎</div></div>
+          <div class="award"><div class="an">金點設計獎</div><div class="ad">Golden Pin Design Award</div></div>
+          <div class="award"><div class="an">動腦雜誌</div><div class="ad">2012 台灣年度傑出設計公司</div></div>
+          <div class="award"><div class="an">經濟部中小企業</div><div class="ad">2011 第二屆台灣感質賞</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- EXPERIENCE -->
+    <div class="sec">
+      <div class="sec-head"><div class="chip">J</div><div><div class="en">Job Experience</div></div><h2>產品領導 × IP 商務 × 品牌合作 × 市場開拓</h2></div>
+      <div class="exp e4">
+        <div><div class="date">2025.08–至今</div><div class="org">鴻海科技集團 智慧城市事業處</div><div class="role">資深專案經理 → 產品組合管理課 主管</div></div>
+        <div class="desc">資深專案經理：負責多項智慧城市專案之規劃、執行與交付（含高雄市政務治理系統、東南亞城市智慧城市專案），推進海外業務提案、參與海內外大型國際展會（含 2026 NVIDIA GTC），並參與集團未來五年規劃。（組織調整後）產品組合管理課主管：帶領團隊將「專案」轉化為「產品」(Product Management)，負責事業處旗艦產品的發展藍圖與 Business Model、梳理與推廣旗下產品組合，並推動 Agentic AI 城市平台之產品化。</div>
+      </div>
+      <div class="exp">
+        <div><div class="date">2019.12–2025.08</div><div class="org">遊戲橘子 Gamania</div><div class="role">IP商務暨營運部 副處長</div></div>
+        <div class="desc">橘子集團 beanfun! 平台（1,000 萬+ 會員）。建立集團 IP 商務暨營運部、帶領 5 團隊 17+ 人；主導集團首個大型熱門 IP 合作專案，達標率達目標 4.4 倍。負責產品 Swapub（亞洲第一 C2C 二手交換行動平台）與 hidol（AI 驅動科技追星平台）營運；同步也負責 IP 代理授權、IP 孵化策略、新產品定位與上市、跨產業合作。</div>
+      </div>
+      <div class="exp e3 vc">
+        <div><div class="date">2015.11–2019.12</div><div class="org">聯合數位文創 udn Digital</div><div class="role">IP授權發展部 總監 / udn售票網 總監 / uDesign 副總監</div></div>
+        <div class="desc">半年內取得 10+ 圖像 IP 代理權（含海外 IP）、授權業務年成長翻倍、政府標案淨利約 30%；售票網年營收最佳 >7 億，主導 Web+APP 大改版；文創電商導入國內外募資專案、主導年度旗艦活動。</div>
+      </div>
+      <div class="exp e1 hl vc">
+        <div><div class="date">2009.05–2015.04</div><div class="org">新視紀整合行銷傳播</div><div class="role">創意研發部 經理（品牌 有藝氏 unique Art）</div></div>
+        <div class="desc">自創生活風格品牌、商品開發、50+ 虛實通路、外銷 8 國、多項國際設計獎（詳見上方）。</div>
+      </div>
+    </div>
+
+    <!-- CAPABILITIES -->
+    <div class="sec">
+      <div class="sec-head"><div class="chip">J</div><div><div class="en">Capabilities & Education</div></div><h2>能力組合與學歷</h2></div>
+      <div class="caps">
+        <div class="cap"><h4>商品 / 產品開發</h4><p>概念發想、商品開發、專利與商標申請</p></div>
+        <div class="cap c2"><h4>品牌建立</h4><p>自創品牌、品牌定位、IP 合作與授權</p></div>
+        <div class="cap c3"><h4>通路與零售</h4><p>50+ 虛實通路布建、國際外銷 8 國</p></div>
+        <div class="cap c4"><h4>行銷與上市</h4><p>GTM、線上線下行銷活動、數位行銷 / SEO / GA</p></div>
+      </div>
+      <div class="edu">
+        <h4>學歷</h4>
+        <ul>
+          <li>東吳大學 法學院 科技法律碩士在職專班（進修中）</li>
+          <li>成功大學 電機學院 製造工程研究所（碩士）</li>
+          <li>臺灣科技大學 管理學院 工業管理系（學士）</li>
+        </ul>
+        <div class="skills"><b>其他技能：</b>數位行銷 · 合約 / 智財管理 · 商品開發 · 品牌建立 · 通路零售 · 產品管理 · Agentic AI · Vibe Coding · 英文中階</div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
